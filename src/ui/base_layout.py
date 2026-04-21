@@ -68,7 +68,6 @@ def style_base_layout():
 
                 font-family : 'Climate Crisis' , sans-serif !important;
                 font-size : 2rem !important;
-                color : black !important;
                 line-height : 0.9 !important;
                 margin-bottom : 0rem !important; 
             }      
