@@ -21,3 +21,8 @@ pillow
 
 #frontend
 streamlit
+
+
+#voice-recognition library
+librosa
+resemblyzer
