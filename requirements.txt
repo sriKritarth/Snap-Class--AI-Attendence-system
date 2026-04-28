@@ -1,3 +1,6 @@
+#Frontend
+streamlit
+
 numpy
 pandas
 
@@ -19,8 +22,8 @@ segno
 #image preprocessing
 pillow
 
-#frontend
-streamlit
+
+
 
 
 #voice-recognition library
