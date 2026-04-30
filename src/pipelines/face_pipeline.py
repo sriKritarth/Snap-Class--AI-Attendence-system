@@ -52,11 +52,11 @@ def get_trained_model():
         return None
 
     for student in student_db:
-        embedding = student['face_embeddings']
+        embedding = student.get('face_embeddings')
 
         if embedding:
             x.append(np.array(embedding))
-            y.append(student['student_id'])
+            y.append(student.get('student_id'))
 
     if len(x) == 0:
         return 0
