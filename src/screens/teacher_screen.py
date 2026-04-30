@@ -165,21 +165,21 @@ def teacher_tab_take_attendance():
                         sources = all_detected_ids.get(int(student['student_id']), [])
                         is_present= len(sources) > 0
 
-                    results.append({
-                        "Name": student['name'],
-                        "ID": student['student_id'],
-                        "Source": ", ".join(sources) if is_present else "-",
-                        "Status": "✅ Present" if is_present else "❌ Absent"
-                    })
+                        results.append({
+                            "Name": student['name'],
+                            "ID": student['student_id'],
+                            "Source": ", ".join(sources) if is_present else "-",
+                            "Status": "✅ Present" if is_present else "❌ Absent"
+                        })
 
-                    attendance_to_log.append({
-                        'student_id': student['student_id'],
-                        'subject_id': selected_subject_id,
-                        'timestamp': current_timestamp,
-                        'is_present': bool(is_present)
-                    })
+                        attendance_to_log.append({
+                            'student_id': student['student_id'],
+                            'subject_id': selected_subject_id,
+                            'timestamp': current_timestamp,
+                            'is_present': bool(is_present)
+                        })
 
-            attendance_result_dialog(pd.DataFrame(results), attendance_to_log)
+                attendance_result_dialog(pd.DataFrame(results), attendance_to_log)
     
     with c3:
         if st.button("Use voice attendance" , type='primary' , width='stretch', icon=":material/mic:"):
